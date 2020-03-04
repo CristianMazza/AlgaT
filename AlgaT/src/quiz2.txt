@@ -1,0 +1,24 @@
+Cosa deve fare una funzione Hash?
+Rinominare il vettore al di fuori della tabella Hash
+Distribuire uniformemente le chiavi lungo il vettore
+Modificare la chiave associata alla cella di memoria
+Distribuire i vettori lungo la chiave
+RISPOSTA:
+Distribuire uniformemente le chiavi lungo il vettore
+;
+Quale tra i seguenti non è una funzione Hash?
+Divisione
+XOR
+Thor
+Estrazione
+RISPOSTA:
+Thor
+;
+Cos'è l'indirizzo hash?
+Un indirizzo IP
+Il domicilio della tabella Hash 
+Un indirizzo MAC
+Il risultato della funzione Hash applicata alla chiave
+RISPOSTA:
+Il risultato della funzione Hash applicata alla chiave
+;

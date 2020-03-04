@@ -1,0 +1,40 @@
+Cos'è un hash table? 
+Una struttura dati
+Un algoritmo
+Un protocollo del livello Rete
+Un hardware dedicato
+RISPOSTA:
+Una struttura dati
+;
+Quale tra i seguenti non è una tecnica di ispezione?
+Ispezione lineare
+Ispezione quadratica
+Doppio hashing
+Triplo hashing
+RISPOSTA:
+Triplo hashing
+;
+Cosa occorre determinare per realizzare algoritmi di ricerca hashing?
+Un software in grado di accedere alla memoria
+Una particolare variabile
+Una funzione hash
+Nessuna delle precedenti
+RISPOSTA:
+Una funzione hash
+;
+Quale problema si può riscontrare nell'hash table?
+Sovraccarico di informazioni
+Riscontro malware
+Problema delle collisioni
+Nessun problema
+RISPOSTA:
+Problema delle collisioni
+;
+Qual è un metodo per risolvere il problema delle collisioni?
+Indirizzamento aperto
+Indirizzamento semiaperto
+Indirizzamento chiuso
+Indirizzamento semichiuso
+RISPOSTA:
+Indirizzamento aperto
+;

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1917.0" snapToPixel="false" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Introduzione">
+   <children>
+      <SplitPane layoutY="101.0" prefHeight="980.0" prefWidth="201.0">
+         <effect>
+            <Lighting diffuseConstant="1.79" specularConstant="1.68" specularExponent="24.11" surfaceScale="5.61">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#ffe4e4" />
+               </light>
+            </Lighting>
+         </effect>
+         <items>
+            <GridPane prefHeight="853.0" prefWidth="180.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="280.0" minHeight="10.0" prefHeight="107.20000534057617" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="518.4000053405762" minHeight="10.0" prefHeight="315.19999465942385" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="589.4000366210937" minHeight="10.0" prefHeight="549.5999999999999" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </items>
+      </SplitPane>
+      <SplitPane orientation="VERTICAL" prefHeight="103.0" prefWidth="1920.0">
+         <effect>
+            <Reflection fraction="0.32" topOpacity="0.49">
+               <input>
+                  <Lighting diffuseConstant="1.5" specularConstant="0.6" specularExponent="38.68" surfaceScale="4.21">
+                     <bumpInput>
+                        <Shadow height="23.38" width="18.62" />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#ffa4a4" />
+                     </light>
+                  </Lighting>
+               </input>
+            </Reflection>
+         </effect>
+         <items>
+            <Label contentDisplay="CENTER" prefHeight="102.0" prefWidth="1834.0" text="TABELLE HASH">
+               <font>
+                  <Font name="Times New Roman Bold" size="54.0" />
+               </font>
+            </Label>
+         </items>
+      </SplitPane>
+      <GridPane layoutX="201.0" layoutY="101.0" prefHeight="978.0" prefWidth="1716.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane fx:id="finequiz" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="469.0" prefWidth="1716.0" visible="false">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="menu_return" mnemonicParsing="false" onMouseClicked="#menureturn" text="Ritorna al menu" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Label text="Complimenti! Hai completato il quiz." GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane fx:id="quiz" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="978.0" prefWidth="1143.0" GridPane.halignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="321.6000122070312" minHeight="10.0" prefHeight="248.79998779296875" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="606.4" minHeight="10.0" prefHeight="384.0000122070312" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="344.0000244140625" minHeight="10.0" prefHeight="344.0000244140625" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox fx:id="vbox1" alignment="CENTER_LEFT" spacing="20.0" GridPane.rowIndex="1">
+                     <children>
+                        <RadioButton fx:id="rb1" contentDisplay="CENTER" lineSpacing="20.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb2" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb3" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb4" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vbox2" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="20" visible="false" GridPane.rowIndex="1">
+                     <children>
+                        <RadioButton fx:id="rb5" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb6" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb7" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb8" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vbox3" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="20" visible="false" GridPane.rowIndex="1">
+                     <children>
+                        <RadioButton fx:id="rb9" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb10" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb11" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb12" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vbox4" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="20" visible="false" GridPane.rowIndex="1">
+                     <children>
+                        <RadioButton fx:id="rb13" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb14" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb15" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb16" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vbox5" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="20" visible="false" GridPane.rowIndex="1">
+                     <children>
+                        <RadioButton fx:id="rb17" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb18" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb19" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rb20" lineSpacing="18.0" mnemonicParsing="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <Label fx:id="domanda1" focusTraversable="false" GridPane.halignment="CENTER">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="domanda2" visible="false">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="domanda3" visible="false">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="domanda4" visible="false">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="domanda5" visible="false">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="conferma" mnemonicParsing="false" onMouseClicked="#conferma" text="Conferma" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="errore" text="Hai sbagliato, riprova!" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <BorderPane fx:id="border5" prefHeight="978.0" prefWidth="1685.0" style="-fx-background-color: white;" visible="false">
+               <top>
+                  <Label alignment="CENTER" prefHeight="186.0" prefWidth="536.0" text="Esempio Indirizzamento aperto" underline="true" BorderPane.alignment="BOTTOM_CENTER">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </Label>
+               </top>
+               <bottom>
+                  <Pane prefHeight="240.0" prefWidth="1716.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="748.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#startquiz" prefHeight="40.0" prefWidth="147.0" text="START QUIZ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="errtab" layoutX="683.0" layoutY="85.0" text="Devi prima completare la tabella!" visible="false">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </bottom>
+               <left>
+                  <Button mnemonicParsing="false" onMouseClicked="#indietro5" prefHeight="40.0" prefWidth="99.0" text="indietro" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </left>
+               <right>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </right>
+               <center>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane gridLinesVisible="true" layoutX="473.0" layoutY="113.0" prefHeight="385.0" prefWidth="471.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="403.4000244140625" minWidth="10.0" prefWidth="173.40001220703124" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="726.6000442504883" minWidth="10.0" prefWidth="394.99998779296885" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="0" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="l0" textFill="RED" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="l1" textFill="RED" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="l2" textFill="RED" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="l3" textFill="RED" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <Label layoutX="473.0" layoutY="42.0" text="Inserici un intero">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="inser" layoutX="599.0" layoutY="40.0" maxWidth="-Infinity" onKeyPressed="#enter" prefHeight="26.0" prefWidth="240.0" />
+                        <Button fx:id="aggiungi" layoutX="867.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#inserisci" text="Aggiungi">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="border4" prefHeight="978.0" prefWidth="1685.0" style="-fx-background-color: white;" visible="false">
+               <right>
+                  <Button mnemonicParsing="false" onMouseClicked="#avanti4" prefHeight="40.0" prefWidth="99.0" text="avanti" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </right>
+               <top>
+                  <Label alignment="CENTER" prefHeight="198.0" prefWidth="536.0" text="Indirizzamento aperto" underline="true" BorderPane.alignment="BOTTOM_CENTER">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </Label>
+               </top>
+               <bottom>
+                  <Pane prefHeight="240.0" prefWidth="1716.0" BorderPane.alignment="CENTER" />
+               </bottom>
+               <left>
+                  <Button mnemonicParsing="false" onMouseClicked="#indietro4" prefHeight="40.0" prefWidth="99.0" text="indietro" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </left>
+               <center>
+                  <ImageView fitHeight="540.0" fitWidth="1090.0" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@Img/teoria4.JPG" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="border3" prefHeight="978.0" prefWidth="1685.0" style="-fx-background-color: white;" visible="false">
+               <right>
+                  <Button mnemonicParsing="false" onMouseClicked="#avanti3" prefHeight="40.0" prefWidth="99.0" text="avanti" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </right>
+               <top>
+                  <Label alignment="CENTER" prefHeight="198.0" prefWidth="536.0" text="Prestazioni" underline="true" BorderPane.alignment="BOTTOM_CENTER">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </Label>
+               </top>
+               <bottom>
+                  <Pane prefHeight="240.0" prefWidth="1716.0" BorderPane.alignment="CENTER" />
+               </bottom>
+               <left>
+                  <Button mnemonicParsing="false" onMouseClicked="#indietro3" prefHeight="40.0" prefWidth="99.0" text="indietro" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </left>
+               <center>
+                  <ImageView fitHeight="540.0" fitWidth="1090.0" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@Img/teoria3.JPG" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="border2" prefHeight="978.0" prefWidth="1685.0" style="-fx-background-color: white;" visible="false">
+               <right>
+                  <Button mnemonicParsing="false" onMouseClicked="#avanti2" prefHeight="40.0" prefWidth="99.0" text="avanti" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </right>
+               <top>
+                  <Label alignment="CENTER" prefHeight="198.0" prefWidth="536.0" text="Funzione" underline="true" BorderPane.alignment="BOTTOM_CENTER">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </Label>
+               </top>
+               <bottom>
+                  <Pane prefHeight="240.0" prefWidth="1716.0" BorderPane.alignment="CENTER" />
+               </bottom>
+               <left>
+                  <Button mnemonicParsing="false" onMouseClicked="#indietro2" prefHeight="40.0" prefWidth="99.0" text="indietro" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </left>
+               <center>
+                  <ImageView fitHeight="540.0" fitWidth="1090.0" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@Img/teoria2.JPG" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="border1" prefHeight="978.0" prefWidth="1685.0" style="-fx-background-color: white;">
+               <right>
+                  <Button mnemonicParsing="false" onMouseClicked="#avanti1" prefHeight="40.0" prefWidth="99.0" text="avanti" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </right>
+               <top>
+                  <Label alignment="CENTER" prefHeight="198.0" prefWidth="536.0" text="Cos'è un hash table?" underline="true" BorderPane.alignment="BOTTOM_CENTER">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </Label>
+               </top>
+               <bottom>
+                  <Pane prefHeight="240.0" prefWidth="1716.0" BorderPane.alignment="CENTER" />
+               </bottom>
+               <left>
+                  <Button fx:id="indietro_menu" mnemonicParsing="false" onMouseClicked="#indietro1" prefHeight="40.0" prefWidth="99.0" text="indietro" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </left>
+               <center>
+                  <ImageView fitHeight="540.0" fitWidth="1090.0" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@Img/teoria1.JPG" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
